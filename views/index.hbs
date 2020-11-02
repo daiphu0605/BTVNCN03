@@ -1,0 +1,50 @@
+
+<div class="container" style="padding-left: 30px; padding-top: 30px;"> 
+    <h1>{{title}}</h1>
+    <form method="post">
+        <div class="row">
+            <div class="col-md-8">
+            <div class="row">
+                <label class="col-md-3">Số thứ nhất</label>
+                <input class="col" type="text" name="st" value={{st}}>
+            </div>
+            <div class="row">
+                <label class="col-md-3">Số thứ hai</label>
+                <input class="col" type="text" name="nd" value={{nd}}>
+            </div>
+            <div class="row">
+                <label class="col-md-3" for="result">Kết quả</label>
+                <input class="col" name="result" value="{{result}}">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="row">
+                <div class="col">
+                    <input type="radio" name="operator" id="plus" value=1 {{#if operator.plus}} checked {{/if}}> Cộng
+                </div>
+                <div class="col">
+                    <input type="radio" name="operator" id="sub" value=2 {{#if operator.sub}} checked {{/if}}> Trừ
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="radio" name="operator" id="mul" value=3 {{#if operator.mul}} checked {{/if}}> Nhân
+                </div>
+                <div class="col">
+                    <input type="radio" name="operator" id="div" value=4 {{#if operator.div}} checked {{/if}}> Chia
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="submit" value="Tính">              
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-md-3">Thông báo</label>
+            <p>{{Error}}</p>
+        </div>
+    </form>
+
+</div>
